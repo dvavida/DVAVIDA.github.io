@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Courier Prime", monospace;
+  background: #fff;
+  color: #3A3A32;
+}
+
+/* ===== WRAPPER ===== */
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  display: block;
+}
+
+/* ===== INDEX PAGE ===== */
+header h1 {
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.post-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer !important;
+}
+
+.meta h2 {
+  font-size: 16px;
+  margin: 10px 0 4px;
+}
+
+.meta p {
+  font-size: 14px;
+  opacity: 1.0;
+}
+
+/* SEO hidden images */
+.seo-images {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+}
+
+/* ===== POST PAGE ===== */
+.back {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* 🔧 FIXED TITLE SPACING */
+h1 {
+  margin: 20px 0 4px;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+/* HERO IMAGE */
+.hero img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+/* ===== CAPTION ===== */
+.caption {
+  opacity: 1.0;
+  font-size: 15px;
+  line-height: 1.6;
+
+  /* 🔧 FIX: caption pakeltas arčiau title */
+  margin: 6px 0 30px 0;
+
+  width: 100%;
+  max-width: 900px;
+
+  text-align: left;
+  white-space: pre-line;
+  display: block;
+  overflow: visible;
+  max-height: none;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .wrap {
+    padding: 20px 15px 60px;
+  }
+
+  .caption {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out !important;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  cursor: pointer !important;
+}
+
+.lb-prev,
+.lb-next {
+  cursor: pointer !important;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 60px 0 40px 0;
+  font-size: 14px;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.footer-link {
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.6;
+}
