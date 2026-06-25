@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DVAVIDA - Binarity & Duality</title>
+  <meta name="description" content="HEXAGRAM: Six-pointed star of DVAVIDA - Two Kinds. Two Lives. Two Forms. Two Versions.
+
+A study of contrast in systems and perception through opposing pairs tha">
+  <meta name="author" content="DVAVIDA">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="DVAVIDA - Binarity & Duality">
+  <meta property="og:description" content="HEXAGRAM: Six-pointed star of DVAVIDA - Two Kinds. Two Lives. Two Forms. Two Versions.
+
+A study of contrast in systems and perception through opposing pairs tha">
+  <meta property="og:image" content="images/hexagram-dvavida.jpg">
+  <link rel="canonical" href="https://dvavida.github.io/hexagram.html">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 3 columns grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    /* hover animation */
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    /* controls */
+    .lb-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 34px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    .lb-prev, .lb-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
+
+    .lb-count {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* click outside closes */
+    .lightbox-bg {
+      position: absolute;
+      inset: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <a href="index.html" class="back">← Back</a>
+
+  <h1>DVAVIDA - Binarity & Duality</h1>
+
+  <div class="caption">
+    HEXAGRAM: Six-pointed star of DVAVIDA - Two Kinds. Two Lives. Two Forms. Two Versions.
+
+A study of contrast in systems and perception through opposing pairs that define each other. Banknote & Coin, Buy & Sell, Hot & Cold, Coffee & Tea, Bitcoin & Ethereum… 
+Duality is not separation, but balance within the same structure.
+  </div>
+
+  <div class="gallery">
+    
+    <div class="gallery-item">
+      <img src="images/hexagram-dvavida.jpg" alt="Hexagram Binarity & Duality">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-1.jpg" alt="Hexagram Binarity & Duality – Banknote & Coin">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-2.jpg" alt="Hexagram Binarity & Duality – Sell & Buy">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-3.jpg" alt="Hexagram Binarity & Duality – Grains & Flour">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-4.jpg" alt="Hexagram Binarity & Duality – Watermelon & Melon">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-5.jpg" alt="Hexagram Binarity & Duality – Bitcoin & Ethereum">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-6.jpg" alt="Hexagram Binarity & Duality – Hollywood & Bollywood">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-7.jpg" alt="Hexagram Binarity & Duality – Deciduous & Coniferous">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-8.jpg" alt="Hexagram Binarity & Duality – Water Hot & Cold">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-9.jpg" alt="Hexagram Binarity & Duality – Coffee & Tea">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-10.jpg" alt="Hexagram Binarity & Duality – Smile and Crying">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-11.jpg" alt="Hexagram Binarity & Duality – Meat & Fish">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-12.jpg" alt="Hexagram Binarity & Duality – Pepsi & Cola">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-13.jpg" alt="Hexagram Binarity & Duality – Beer & Vodka">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-14.jpg" alt="Hexagram Binarity & Duality – Audio & Video">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-15.jpg" alt="Hexagram Binarity & Duality – Panda & Koala">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-16.jpg" alt="Hexagram Binarity & Duality – Sport Bike & Chopper">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-17.jpg" alt="Hexagram Binarity & Duality – White Bread & Brown Bread">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-18.jpg" alt="Hexagram Binarity & Duality – Sugar & Salt">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-19.jpg" alt="Hexagram Binarity & Duality – Knife & Bullets">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-20.jpg" alt="Hexagram Binarity & Duality – Match & Lighters">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-21.jpg" alt="Hexagram Binarity & Duality – Clouds & Fog">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-22.jpg" alt="Hexagram Binarity & Duality – Tall & Short">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-23.jpg" alt="Hexagram Binarity & Duality – Poison & Vitamins">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-24.jpg" alt="Hexagram Binarity & Duality – Sweet & Salty">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-25.jpg" alt="Hexagram Binarity & Duality – Battery & Electric">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-26.jpg" alt="Hexagram Binarity & Duality – Horse & Donkey">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-27.jpg" alt="Hexagram Binarity & Duality – Sandals & Shoes">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-28.jpg" alt="Hexagram Binarity & Duality – Shark & Dolphin">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-29.jpg" alt="Hexagram Binarity & Duality – Go & Stop">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-30.jpg" alt="Hexagram Binarity & Duality – Start & Finish">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-31.jpg" alt="Hexagram Binarity & Duality – Mountaineering & Diving">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-32.jpg" alt="Hexagram Binarity & Duality – Sunglasses & Eyeglasses">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-33.jpg" alt="Hexagram Binarity & Duality – Burger & Pizza">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-34.jpg" alt="Hexagram Binarity & Duality – Mayonnaise & Ketchup">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-35.jpg" alt="Hexagram Binarity & Duality – Socket & Plug">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-36.jpg" alt="Hexagram Binarity & Duality – iPhone & Android">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-37.jpg" alt="Hexagram Binarity & Duality – Intel & AMD">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-38.jpg" alt="Hexagram Binarity & Duality – Fried Eggs & Omelette">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-39.jpg" alt="Hexagram Binarity & Duality – Screw & Nail">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-40.jpg" alt="Hexagram Binarity & Duality – Rope & Cable">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-41.jpg" alt="Hexagram Binarity & Duality – Pistol & Revolver">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-42.jpg" alt="Hexagram Binarity & Duality – Ship & Submarine">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-43.jpg" alt="Hexagram Binarity & Duality – Airplane & Helicopter">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-44.jpg" alt="Hexagram Binarity & Duality – Laptop & Desctop">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-45.jpg" alt="Hexagram Binarity & Duality – Red & Black Pepper">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-46.jpg" alt="Hexagram Binarity & Duality – Bed & Chair">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-47.jpg" alt="Hexagram Binarity & Duality – Orange & Grapefruit">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-48.jpg" alt="Hexagram Binarity & Duality – Skis & Snowboard">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-49.jpg" alt="Hexagram Binarity & Duality – Blinds & Curtains">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-50.jpg" alt="Hexagram Binarity & Duality – Swimming & Flying">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-51.jpg" alt="Hexagram Binarity & Duality – Dogs & Cats">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-52.jpg" alt="Hexagram Binarity & Duality – Youtube & TikTok">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-53.jpg" alt="Hexagram Binarity & Duality – Nvidia & Radeon">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-54.jpg" alt="Hexagram Binarity & Duality – Lemon & Lime">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-55.jpg" alt="Hexagram Binarity & Duality – Tomato & Cucumber">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-56.jpg" alt="Hexagram Binarity & Duality – Snow & Rain">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-57.jpg" alt="Hexagram Binarity & Duality – Ebay & Amazon">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-58.jpg" alt="Hexagram Binarity & Duality – Car & Motorcycle">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-59.jpg" alt="Hexagram Binarity & Duality – Boats & Speedboat">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-60.jpg" alt="Hexagram Binarity & Duality – Mountain & Pit">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-61.jpg" alt="Hexagram Binarity & Duality – Radio & TV">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/hexagram-62.jpg" alt="Hexagram Binarity & Duality – Solid & Liquid">
+    </div>
+  
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+
+  <div class="lightbox-bg" onclick="closeLightbox()"></div>
+
+  <div class="lb-count" id="lb-count"></div>
+
+  <div class="lb-close" onclick="closeLightbox()">×</div>
+
+  <div class="lb-prev" onclick="showPrev()">‹</div>
+
+  <img id="lightbox-img" src="">
+
+  <div class="lb-next" onclick="showNext()">›</div>
+
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll(".gallery img");
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+
+    const img = document.getElementById("lightbox-img");
+    const lb = document.getElementById("lightbox");
+
+    img.src = galleryImages[index].src;
+    img.alt = galleryImages[index].alt;
+
+    lb.classList.add("active");
+    updateCount();
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+
+  function updateCount() {
+    document.getElementById("lb-count").textContent =
+      `${currentIndex + 1} / ${galleryImages.length}`;
+  }
+
+  function showNext() {
+    if (currentIndex < galleryImages.length - 1) {
+      openLightbox(currentIndex + 1);
+    }
+  }
+
+  function showPrev() {
+    if (currentIndex > 0) {
+      openLightbox(currentIndex - 1);
+    }
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => openLightbox(index));
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+</script>
+
+</body>
+</html>

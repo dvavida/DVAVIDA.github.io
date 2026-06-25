@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DVAVIDA on The Street</title>
+  <meta name="description" content="Two kinds astronomical events occur along the same street.
+    Participants: The STREET and The SUN. 
+    Tools and equipment: Masonic Letter "M", All-seeing ey">
+  <meta name="author" content="DVAVIDA">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="DVAVIDA on The Street">
+  <meta property="og:description" content="Two kinds astronomical events occur along the same street.
+    Participants: The STREET and The SUN. 
+    Tools and equipment: Masonic Letter "M", All-seeing ey">
+  <meta property="og:image" content="images/hexagram-gold.jpg">
+  <link rel="canonical" href="https://dvavida.github.io/two-summers-street.html">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* 3 columns grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    /* hover animation */
+    .gallery img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    /* controls */
+    .lb-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 34px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    .lb-prev, .lb-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
+
+    .lb-count {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-size: 14px;
+    }
+
+    /* click outside closes */
+    .lightbox-bg {
+      position: absolute;
+      inset: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <a href="index.html" class="back">← Back</a>
+
+  <h1>DVAVIDA on The Street</h1>
+
+  <div class="caption">
+    Two kinds astronomical events occur along the same street.
+    Participants: The STREET and The SUN. 
+    Tools and equipment: Masonic Letter "M", All-seeing eye, Hexagram, Hexagon - Cube, Pentagram, Butterfly, X-Cross, Double V and Double-headed eagle.
+  </div>
+
+  <div class="gallery">
+    
+    <div class="gallery-item">
+      <img src="images/hexagram-gold.jpg" alt="DVAVIDA on The Street – photo 1">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-1.jpg" alt="DVAVIDA on The Street – photo 2">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-2.jpg" alt="DVAVIDA on The Street – photo 3">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-3.jpg" alt="DVAVIDA on The Street – photo 4">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-4.jpg" alt="DVAVIDA on The Street – photo 5">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-5.jpg" alt="DVAVIDA on The Street – photo 6">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-6.jpg" alt="DVAVIDA on The Street – photo 7">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-7.jpg" alt="DVAVIDA on The Street – photo 8">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-8.jpg" alt="DVAVIDA on The Street – photo 9">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-9.jpg" alt="DVAVIDA on The Street – photo 10">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-10.jpg" alt="DVAVIDA on The Street – photo 11">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-11.jpg" alt="DVAVIDA on The Street – photo 12">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-12.jpg" alt="DVAVIDA on The Street – photo 13">
+    </div>
+  
+    <div class="gallery-item">
+      <img src="images/dv-14.jpg" alt="DVAVIDA on The Street – photo 14">
+    </div>
+  
+  </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+
+  <div class="lightbox-bg" onclick="closeLightbox()"></div>
+
+  <div class="lb-count" id="lb-count"></div>
+
+  <div class="lb-close" onclick="closeLightbox()">×</div>
+
+  <div class="lb-prev" onclick="showPrev()">‹</div>
+
+  <img id="lightbox-img" src="">
+
+  <div class="lb-next" onclick="showNext()">›</div>
+
+</div>
+
+<script>
+  const galleryImages = document.querySelectorAll(".gallery img");
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+
+    const img = document.getElementById("lightbox-img");
+    const lb = document.getElementById("lightbox");
+
+    img.src = galleryImages[index].src;
+    img.alt = galleryImages[index].alt;
+
+    lb.classList.add("active");
+    updateCount();
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+
+  function updateCount() {
+    document.getElementById("lb-count").textContent =
+      `${currentIndex + 1} / ${galleryImages.length}`;
+  }
+
+  function showNext() {
+    if (currentIndex < galleryImages.length - 1) {
+      openLightbox(currentIndex + 1);
+    }
+  }
+
+  function showPrev() {
+    if (currentIndex > 0) {
+      openLightbox(currentIndex - 1);
+    }
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => openLightbox(index));
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+</script>
+
+</body>
+</html>
