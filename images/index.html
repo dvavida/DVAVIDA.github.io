@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DVAVIDA - Binary World | Explore the Real Duality</title>
+  <meta name="description" content="Worldwide sunrise and sunset views along a street avenue, in perspective.">
+  <meta name="author" content="DVAVIDA">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="DVAVIDA - Binary World | Explore the Real Duality">
+  <meta property="og:description" content="Worldwide sunrise and sunset views along a street avenue, in perspective.">
+  <meta property="og:image" content="https://dvavida.github.io/images/logo-dvavida.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DVAVIDA">
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": "DVAVIDA",
+  "alternateName": [
+    "dva vida",
+    "two kinds",
+    "двавида",
+    "два вида"
+  ],
+  "description": "Worldwide sunrise and sunset views along a street avenue, in perspective.",
+  "image": "https://dvavida.github.io/images/logo-dvavida.jpg",
+  "url": "https://dvavida.github.io/",
+  "sameAs": [
+    "https://instagram.com/dvavida",
+    "https://pinterest.com/dva_vida",
+    "https://bio.site/dvavida"
+  ]
+}
+</script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3F92N390F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C3F92N390F');
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<p style="font-size:0; line-height:0; height:0; overflow:hidden;">
+DVAVIDA - Binary World | Explore the Real Duality
+</p>
+
+<div class="wrap">
+
+  <header>
+    <h1>DVAVIDA</h1>
+    <p>Binary World</p>
+  </header>
+
+  <main class="grid" id="postsGrid"></main>
+
+</div>
+
+<script src="posts.js?v=1"></script>
+
+<script>
+  const grid = document.getElementById("postsGrid");
+
+  Object.keys(POSTS).forEach(id => {
+    const post = POSTS[id];
+    const thumb = post.images[0];
+
+    const card = document.createElement("a");
+    card.className = "post-card";
+    card.href = `post.html?id=${id}`;
+
+    card.innerHTML = `
+      <div class="thumb">
+        <img src="${thumb.src}" alt="${thumb.alt}">
+      </div>
+
+      <div class="meta">
+        <h2>${post.title}</h2>
+        <p>${post.caption.split("\n")[0]}</p>
+      </div>
+
+      <div class="seo-images">
+        ${post.images.map(img => `<img src="${img.src}" alt="${img.alt}">`).join("")}
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+</script>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Hexagram — </span>
+  <a href="https://bio.site/dvavida" class="footer-link">DVAVIDA</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
