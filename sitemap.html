@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Site Map</title>
+  <meta name="description" content="Complete list of all pages on the website.">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      max-width:800px;
+      margin:40px auto;
+      padding:20px;
+      font-family:'Courier Prime', monospace;
+      line-height:1.8;
+      background:#fff;
+      color:#111;
+    }
+
+    h1{
+      margin-bottom:10px;
+      font-size:2rem;
+    }
+
+    p{
+      margin-bottom:30px;
+    }
+
+    ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    li{
+      margin:12px 0;
+    }
+
+    a{
+      color:#111;
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    footer{
+      margin-top:60px;
+      padding-top:20px;
+      border-top:1px solid #ddd;
+      text-align:center;
+      font-size:14px;
+    }
+
+    footer a{
+      margin:0 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Site Map</h1>
+
+  <p>Browse all available pages.</p>
+
+  <ul>
+    <li><a href="https://dvavida.github.io/">Home</a></li>
+    <li><a href="https://dvavida.github.io/six-pointed-star.html">Six-pointed star of DVAVIDA | Hexagram</a></li>
+    <li><a href="https://dvavida.github.io/eternal-cycle.html">DVAVIDA Eternal Cycle | VAV-69</a></li>
+    <li><a href="https://dvavida.github.io/space-odyssey-monolith.html">2001: A Space Odyssey | Monolith</a></li>
+    <li><a href="https://dvavida.github.io/two-summers-street.html">DVAVIDA on The Street</a></li>
+    <li><a href="https://dvavida.github.io/pharaoh-solar-dates.html">Pharaoh Soldiers | Solar Dates</a></li>
+    <li><a href="https://dvavida.github.io/masonic-pentagram.html">Masonic Letter M | Pentagram</a></li>
+    <li><a href="https://dvavida.github.io/masonic-scythe.html">Masonic Square & Compasses | Scythe</a></li>
+    <li><a href="https://dvavida.github.io/binarity-duality.html">Binarity & Duality | Hexagram</a></li>
+  </ul>
+
+  <footer>
+    © <span id="year"></span> DVAVIDA —
+    <a href="https://bio.site/dvavida">Biosite</a> |
+    <a href="https://dvavida.github.io/">Home</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
