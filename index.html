@@ -27,22 +27,45 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "DVAVIDA",
-  "alternateName": [
-    "dva vida",
-    "david",
-    "dvavid",
-    "davida"
-  ],
-  "description": "Discover the true meanings of symbols and symbolism in real life, from cultural traditions and spirituality to everyday signs and hidden messages.",
-  "image": "https://dvavida.github.io/images/dva-logo.jpg",
-  "url": "https://dvavida.github.io/",
-  "sameAs": [
-    "https://dvavida.com/",
-    "https://dvavid.com/",
-    "https://bio.site/dvavida",
-    "https://www.instagram.com/dvavida"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dvavida.com/#organization",
+      "name": "DVAVIDA",
+      "alternateName": "dva vida",
+      "url": "https://dvavida.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dvavida.github.io/images/dva-logo.jpg"
+      },
+      "sameAs": [
+        "https://bio.site/dvavida",
+        "https://www.instagram.com/dvavida"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dvavida.github.io/#webpage",
+      "url": "https://dvavida.github.io/",
+      "name": "DVAVIDA",
+      "description": "Discover the true meanings of symbols and symbolism in real life, from cultural traditions and spirituality to everyday signs and hidden messages.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://dvavida.com/#website"
+      },
+      "publisher": {
+        "@id": "https://dvavida.com/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dvavida.com/#website",
+      "url": "https://dvavida.com/",
+      "name": "DVAVIDA",
+      "publisher": {
+        "@id": "https://dvavida.com/#organization"
+      }
+    }
   ]
 }
 </script>
