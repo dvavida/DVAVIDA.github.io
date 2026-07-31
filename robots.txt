@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dvavida.github.io/sitemap.xml
+Sitemap: https://dvavida.com/github-sitemap.xml
